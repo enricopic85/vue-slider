@@ -16,11 +16,7 @@
             <img :src="img[currentIndex]" alt="">
             <i class="fas fa-arrow-circle-right pa-y " @click="nextImg"></i>
             <div class="pallini">
-                <span :class="['pallino', img[currentIndex]===currentIndex ? 'active' : 'disable']"></span>
-                <span :class="['pallino', img[currentIndex]===currentIndex ? 'active' : 'disable']"></span>
-                <span :class="['pallino', img[currentIndex]===currentIndex ? 'active' : 'disable']"></span>
-                <span :class="['pallino', img[currentIndex]===currentIndex ? 'active' : 'disable']"></span>
-                <span :class="['pallino', img[currentIndex]===currentIndex ? 'active' : 'disable']"></span>  
+               <span v-for="(items,index) in img" :class="['pallino', index===currentIndex ? 'active' : 'disable']"></span>
             </div>
             
         </div>
