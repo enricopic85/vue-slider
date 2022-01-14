@@ -12,15 +12,15 @@
 <body>
     <div id="app">
         <div class="container">
-            <i class="fas fa-arrow-circle-left pa-x"></i>
+            <i class="fas fa-arrow-circle-left pa-x" @click="prevImg"></i>
             <img :src="img[currentIndex]" alt="">
-            <i class="fas fa-arrow-circle-right pa-y"></i>
+            <i class="fas fa-arrow-circle-right pa-y " @click="nextImg"></i>
             <div class="pallini">
-                <span class="pallino"></span>
-                <span class="pallino"></span>
-                <span class="pallino"></span>
-                <span class="pallino"></span>
-                <span class="pallino"></span>
+                <span :class="['pallino', img[currentIndex]===currentIndex ? 'active' : 'disable']"></span>
+                <span :class="['pallino', img[currentIndex]===currentIndex ? 'active' : 'disable']"></span>
+                <span :class="['pallino', img[currentIndex]===currentIndex ? 'active' : 'disable']"></span>
+                <span :class="['pallino', img[currentIndex]===currentIndex ? 'active' : 'disable']"></span>
+                <span :class="['pallino', img[currentIndex]===currentIndex ? 'active' : 'disable']"></span>  
             </div>
             
         </div>
